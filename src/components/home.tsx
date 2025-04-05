@@ -23,6 +23,7 @@ import DashboardLayout from "./dashboard/DashboardLayout";
 import MetricsOverview from "./dashboard/MetricsOverview";
 import AlertsPanel from "./dashboard/AlertsPanel";
 import DataVisualization from "./dashboard/DataVisualization";
+import DatabaseConnectionStatus from "./DatabaseConnectionStatus";
 
 const Home = () => {
   const [activeTab, setActiveTab] = useState("overview");
@@ -228,6 +229,9 @@ const Home = () => {
               </TabsList>
             </Tabs>
           </div>
+
+          {/* Database Connection Status */}
+          <DatabaseConnectionStatus />
 
           {/* Metrics Overview Section */}
           <MetricsOverview metrics={metricsData} language={language} />
